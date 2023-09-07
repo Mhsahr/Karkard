@@ -1,0 +1,42 @@
+﻿<html dir="rtl" lang="fa-IR">
+
+@model List<Person>
+@{
+    ViewData["Title"] = "مخاطب جدید";
+
+}
+
+
+<h1 style="color:purple">@ViewData["Title"]</h1>
+<hr />
+
+
+<h3><b>اضافه کردن مخاطب جدید</b></h3>
+<form class="form" method="post" action="">
+
+    <div class="row mb-2 p-2">
+        <label for="">نام:</label>
+        <input type="text" name="Name" value="" />
+    </div>
+
+
+    <div class="row mb-2 p-2">
+        <label for="">شماره همراه: </label>
+        <input type="tel" name="PhoneNumber" value="" />
+    </div>
+
+    <div class="row mb-2 p-2">
+        <label for="">ایمیل: </label>
+        <input type="text" name="Email" value="" />
+    </div>
+
+    <div class="mb-5 p-5">
+
+        <input type="submit" value="ثبت" class="submit" />
+    </div>
+
+
+
+
+</form>
+</html>

@@ -1,0 +1,38 @@
+﻿<html dir="rtl" lang="fa-IR">
+
+@model List<Person>
+
+@{
+    ViewData["Title"] = "مخاطبین";
+
+}
+
+<h1 style="color:purple">@ViewData["Title"]</h1>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col">نام</div>
+        <div class="col">شماره همراه</div>
+        <div class="col">ایمیل</div>
+
+            
+        @foreach (var item in Model)
+        {
+            <div class="row">
+
+            <div class="col"> @item.Name</div>
+            <div class="col"> @item.PhoneNumber</div>
+            <div class="col">@item.Email</div>
+             </div> 
+        }
+
+    </div>
+</div>
+
+</html>
+
+    
+
+
+
