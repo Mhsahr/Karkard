@@ -7,12 +7,25 @@
 
 }
 
+
+
 <h1 style="color:purple">@ViewData["Title"]</h1>
 <hr />
 
+
+
+<a  href="https://localhost:44301/Contact/Form" class=" btn btn-primary px-4 mx-4 mb-4">مخاطب جدید</a>
+
+<form class="search" action="@Url.Action("Search", "Contact")" method="get">
+    <input type="text" name="searchString" placeholder="Search...">
+    <button type="submit">Search</button>
+</form>
+
+
+
 <div class="container">
     <div class="row">
-        <div class="col">نام</div>
+        <div class="col mb-2">نام</div>
         <div class="col">شماره همراه</div>
         <div class="col">ایمیل</div>
 

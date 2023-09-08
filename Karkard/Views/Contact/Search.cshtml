@@ -1,0 +1,38 @@
+﻿<html dir="rtl">
+@model List<Person>  
+@{
+    ViewData["Title"] = "Search Results";
+}
+
+<img src="~/css/decoration-star.svg" alt="" class="decoration-star position-absolute" />
+<img src="~/css/decoration-star.svg" alt="" class="decoration-star-2 position-absolute" />
+
+<h1>نتایج جستجو</h1>
+
+@if (Model.Count == 0)
+{
+    <p>نتیجه ای یافت نشد. </p>
+}
+else
+{
+    <ul>
+        @foreach (var person in Model)
+        {
+            <li>
+                <div class="row mb-2 p-2">
+                <strong class="col">نام:</strong> @person.Name
+                </div>
+
+                    <div class="row mb-2 p-2">
+                <strong class="col">شماره همراه:</strong> @person.PhoneNumber
+                </div>
+
+                <div class="row mb-2 p-2">
+                    <strong class="col">ایمیل:</strong> @person.Email
+                </div>
+
+            </li>
+        }
+    </ul>
+}
+</html>
