@@ -1,0 +1,177 @@
+<link href="~/lib/bootstrap/dist/css/bootstrap-Lumen.css" rel="stylesheet" / >
+
+html {
+    font-size: 14px;
+    font-family: BNazanin;
+    src: url("../farsi/BNazanin.woff") format('woff')
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+        font-family: BNazanin;
+        src: url("../farsi/BNazanin.woff") format('woff')
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: BNazanin;
+    src: url("../farsi/BNazanin.woff") format('woff')
+}
+
+.small-input {
+    width: 150px;
+    height: 30px;
+    background-color: #f7f7f7;
+}
+
+
+
+.input{
+    background-color:#f7f7f7;
+}
+
+.btn-primary:hover {
+    background-color: purple;
+}
+
+.btn-primary {
+    background-color: mediumpurple;
+    border: solid .25em transparent;
+    border-radius: 9em;
+
+}
+
+.decoration-star {
+    top: -330px;
+    left: -100px;
+    width: 500px;
+    opacity: 0.7;
+    z-index: -1; /* Place the image behind other content */
+    height: auto;
+    background-image: url('~/css/decoration-star.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.decoration-star-2 {
+    top:500px;
+    right: -200px;
+    width: 500px;
+    opacity: 0.7;
+}
+.decorate-star {
+    top: -150px;
+    left: -200px;
+    width: 500px;
+    opacity: 0.7;
+    z-index: -1; /* Place the image behind other content */
+    height: auto;
+    background-image: url('~/css/decoration-star.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.decorate-star-2 {
+    top: 450px;
+    right: -200px;
+    width: 500px;
+    opacity: 0.7;
+    z-index: -1; /* Place the image behind other content */
+    height: auto;
+    background-image: url('~/css/decoration-star.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+    .xl-text{
+        font-size: 50px;
+    }
+
+    #one {
+        margin-left: 60px;
+    }
+
+    #two {
+        margin-left: 60px;
+    }
+
+
+    .header{
+        margine-top: 0px !important;
+        text-align:center;
+    }
+
+        .decoration-star {
+            top:-200px;
+            left: -100px;
+            width: 250px;
+        }
+
+        .decoration-star-2 {
+            top:500px;
+            right: -170px;
+            width: 400px;
+        }
+
+    .decorate-star {
+       top: 500px;
+        right: -170px;
+        width: 400px;
+    }
+
+    .decorate-star-2 {
+        top: 500px;
+        right: -170px;
+        width: 400px;
+    }
+
+}
+
+
+@media (max-width: 567px){
+
+}
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+        direction: rtl;
+    }
+
+ 
+}
+
+.search {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    direction: ltr;
+    float: left;
+    text-align-last: left;
+    z-index: 1;
+    position: relative; /* Add relative positioning */
+}
+
+
+
+
+@font-face {
+    font-family: BNazanin;
+    src: url("../farsi/BNazanin.woff") format('woff')
+}

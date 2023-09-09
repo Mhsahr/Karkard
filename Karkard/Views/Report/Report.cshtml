@@ -1,8 +1,12 @@
-﻿@model List<Work>
+﻿<html dir="rtl" lang="fa-IR">
+
+@model List<Work>
 @{
-    ViewData["Title"] = "Report";
+    ViewData["Title"] = "گزارش روزانه";
 
 }
+<img src="~/css/decoration-star.svg" alt="" class="decorate-star position-absolute" />
+<img src="~/css/decoration-star.svg" alt="" class="decorate-star-2 position-absolute" />
 
 <h1 style="color:blue">@ViewData["Title"]</h1>
 <hr />
@@ -10,30 +14,30 @@
 
 
 
-<div class="wrapper">
-    <div class="container"> 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">From</th>
-            <th scope="col">Until</th>
-        </tr>
-    </thead>
-    @foreach (var item in Model)
-    {
-        <tbody>
-            <tr>
-                <th scope="row">@item.Id</th>
-                <td>@item.Name</td>
-                <td>@item.From</td>
-                <td>@item.Until</td>
-        </tbody>
-    }
-</table>
-</div>
+<div class="container">
+    <div class="row">
+        <div class="col ms-2">ID</div>
+        <div class="col">نام</div>
+        <div class="col">ساعت ورود </div>
+        <div class="col">ساعت خروج </div>
+
+            
+        @foreach (var item in Model)
+        {
+            <div class="row">
+
+                <div class="col ms-5"> @item.Id</div>
+                <div id="one" class="col ms-md-5 "> @item.Name</div>
+                <div id="two" class="col ms-md-5">@item.From</div>
+            <div id="three" class="col">@item.Until</div>
+                
+             </div> 
+        }
+
+    </div>
 </div>
 
+</html>
 
+    
 

@@ -1,52 +1,66 @@
-﻿@model List<Work>
+﻿<html dir="rtl" lang="fa-IR">
+
+@model List<Work>
 @{
-    ViewData["Title"] = "Form";
+    ViewData["Title"] = "فرم";
 
 }
+<img src="~/css/decoration-star.svg" alt="" class="decorate-star position-absolute" />
+<img src="~/css/decoration-star.svg" alt="" class="decorate-star-2 position-absolute" />
 
 <h1 style="color:blue">@ViewData["Title"]</h1>
 <hr />
 
 
-<h3><b>Forms: Daily Report</b></h3>
+<h3><b>گزارش روزانه </b></h3>
 <form class="form" method="post" action="">
 
     <div class="row mb-2 p-2">
         <div class="col ">
-            <label for="">Enter the ID:</label>
-            <input class="" type="number" name="Id" value="" />
 
+        <label class="mb-2" for="">ID:</label>
+            <div class="col ">
+
+        <input class="small-input" type="number" name="Id" value="" />
         </div>
-        <div class="col">
-            <label for="">Enter your name:</label>
-
-
-            <input type="text" name="Name" value="" />
-
         </div>
 
-
+       <div class="col ">
+        <label class="mb-2" for="">نام:</label>
+            <div class="col ">
+        <input class="small-input" type="text" name="Name" value="" />
+        </div>
+        </div>
     </div>
+
 
     <div class="row mb-2 p-2">
         <div class="col ">
-            <label for="">Enter the time you arrived:</label>
-            <input type="time" name="From" value="" />
+            <div class="col ">
 
-        </div>
-        <div class="col">
-            <label for=""> Enter the time you left: </label>
-            <input type="time" name="Until" value="" />
-
+        <label class="mb-2" for="">ساعت ورود:</label>
         </div>
 
-        <div class="mb-5 p-5">
-
-            <input type="submit" value="Submit the forms" class="submit" />
+        <input class="small-input" type="time" name="From" value="" />
         </div>
 
+        <div class="col ">
 
+        <label class="mb-2" for=""> ساعت خروج: </label>
+            <div class="col ">
+
+        <input class="small-input" type="time" name="Until" value="" />
+        </div>
+        </div>
     </div>
+
+        <div>
+
+            <input type="submit" value="ثبت" class="submit" />
+        </div>
+
+
 
 
 </form>
+</html>

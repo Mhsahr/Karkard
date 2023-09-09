@@ -10,9 +10,9 @@ namespace Karkard.Controllers
     {
         private readonly ILogger<ReportController> _logger;
         private static List<Work> workData = new List<Work>() {
-            new Work { Id =1, Name="Hassan", From="8:00", Until="17:00" },
-            new Work { Id =2, Name="Mina", From="9:00", Until="16:00" },
-            new Work { Id =3, Name="Mahsa", From="8:30", Until="16:45" }
+            new Work { Id =1, Name="حسن", From="8:00", Until="17:00" },
+            new Work { Id =2, Name="مینا", From="9:00", Until="16:00" },
+            new Work { Id =3, Name="مهسا", From="8:30", Until="16:45" }
         };
 
 
