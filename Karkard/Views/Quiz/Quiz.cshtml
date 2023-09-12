@@ -1,0 +1,190 @@
+﻿<html dir="rtl" lang="fa-IR">
+
+@model Karkard.Models.Answers
+
+
+@{
+    ViewData["Title"] = "آزمون";
+
+}
+
+<img src="~/css/decoration-star.svg" alt="" class="decorate-star position-absolute" />
+
+
+<h1 style="color:brown">@ViewData["Title"]</h1>
+<hr />
+<div asp-validation-summary="All" class="text">
+
+<form method="post" class="border" asp-controller="Quiz" asp-action="QuizResult">
+    @Html.AntiForgeryToken()
+
+    <div class="mb-1">
+    <p>1. بر اساس آیین نامه راهنمایی رانندگی ایستاندن ممنوع همان ........... است</p>
+    <div class="row">
+        <div class="col">
+            <input type="radio" id="q1-1" name="Answer1" value="1" />
+            <label class="mb-1" for="q1-1">1. توقف ممنوع</label>
+        </div>
+        <div class="row">
+        <div class="col">
+            <input type="radio" id="q1-2" name="Answer1" value="2" />
+            <label class="mb-1" for="q1-2">2. توقف مطلقا ممنوع</label>
+        </div>
+            </div>
+        <div class="col">
+            <input type="radio" id="q1-3" name="Answer1" value="3" />
+            <label class="mb-1" for="q1-3">3. توقف</label>
+        </div>
+        <div class="row">
+        <div class="col">
+            <input type="radio" id="q1-4" name="Answer1" value="4" />
+            <label class="mb-1" for="q1-4">4. ایست وسیله نقلیه در زمان کوتاه</label>
+        </div>
+            </div>
+    </div>
+        </div>
+
+
+<div class="mb-1">
+
+<p>2. در بزرگراه های درون شهری حداکثر سرعت چند کیلومتر در ساعت است </p>
+
+<div class="row">
+
+    <div class="col">
+                <input type="radio" id="q2-1" name="Answer2" value="1" />
+                <label class="mb-1" for="q2-1">1. 110 </label>
+    </div>
+
+    <div class="row">
+        <div class="col">
+                <input type="radio" id="q2-2" name="Answer2" value="2" />
+                <label class="mb-1" for="q2-2">2. 120</label>
+        </div>
+                </div>
+
+                <div class="row">
+            <div class="col">
+                <input type="radio" id="q2-3" name="Answer2" value="3" />
+                <label class="mb-1" for="q2-3">3. 100</label>
+        </div>
+        </div>
+
+                <div class="col">
+                <input type="radio" id="q2-4" name="Answer2" value="4" />
+                <label class="mb-1" for="q2-4">4. 95</label>
+        </div>
+</div>
+</div>
+
+<div class="mb-1">
+
+<p>3. از چند متری بعد از پیچ ها سبقت گرفتن آزاد است </p>
+<div class="row">
+
+    <div class="col">
+                <input type="radio" id="q3-1" name="Answer3" value="1" />
+                <label class="mb-1" for="q3-1">1. 30 متری </label>
+        </div>
+
+                <div class="row">
+        <div class="col">
+                <input type="radio" id="q3-2" name="Answer3" value="2" />
+                <label class="mb-1" for="q3-2">2. 50 متری</label>
+</div>
+</div>
+
+                <div class="row">
+
+        <div class="col">
+                <input type="radio" id="q3-3" name="Answer3" value="3" />
+                <label class="mb-1" for="q3-3">3. 20 متری</label>
+    </div>
+    </div>
+
+                        <div class="row">
+        <div class="col">
+                <input type="radio" id="q3-4" name="Answer3" value="4" />
+                <label class="mb-1" for="q3-4">4. 100 متری</label>
+    </div>
+    </div>
+
+</div>
+</div>
+<div class="mb-1">
+
+<p>4. قبل از شروع حرکت باید کدام یک از چراغ های خودرو مورد بازبینی قرار بگیرد </p>
+
+<div class="row">
+
+    <div class="col">
+                <input type="radio" id="q4-1" name="Answer4" value="1" />
+                <label class="mb-1" for="q4-1">1. چراغ جلو - چراغ عقب - چراغ ABS - چراغ راهنما </label>
+        </div>
+
+                <div class="row">
+        <div class="col">
+                <input type="radio" id="q4-2" name="Answer4" value="2" />
+                <label class="mb-1" for="q4-2">2. چراغ جلو - چراغ عقب - چراغ راهنما در صورت کثیف بودن</label>
+        </div>
+        </div>
+
+                            <div class="row">
+            <div class="col">
+                <input type="radio" id="q4-3" name="Answer4" value="3" />
+                <label class="mb-1" for="q4-3">3. چراغ جلو - چراغ خطر  - چراغ دنده عقب - چراغ راهنما</label>
+        </div>
+        </div>
+
+                            <div class="row">
+                <div class="col">
+                <input type="radio" id="q4-4" name="Answer4" value="4" />
+                <label class="mb-1" for="q4-4">4. گزینه 2 و 3 صحیح است</label>
+        </div>
+        </div>
+</div>
+</div>
+
+<div class="mb-1">
+<p>5. در آزادراه های برون شهری حداقل سرعت چند کیلومتر در ساعت است </p>
+<div class="row">
+    <div class="col">
+                <input class="col input" type="radio" id="q5-1" name="Answer5" value="1" />
+                <label class="mb-1" for="q5-1">1. 95 </label>
+    </div>
+
+                        <div class="row">
+        <div class="col">
+                <input type="radio" id="q5-2" name="Answer5" value="2" />
+                <label class="mb-1" for="q5-2">2. 80 </label>
+    </div>
+    </div>
+
+                <div class="row">
+        <div class="col">
+                <input type="radio" id="q5-3" name="Answer5" value="3" />
+                <label class="mb-1" for="q5-3">3. 70 </label>
+    </div>
+    </div>
+
+                        <div class="row">
+        <div class="col">
+                <input type="radio" id="q5-4" name="Answer5" value="4" />
+                <label class="mb-1" for="q5-4">4. 65 </label>
+    </div>
+    </div>
+           
+
+</div>
+</div>
+
+<div class="mb-2">
+    <input type="submit" value="ثبت" class="submit p-2 " />
+</div>
+
+
+</form>
+
+</div>
+
+</html>

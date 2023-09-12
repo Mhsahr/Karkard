@@ -1,0 +1,43 @@
+﻿<html dir="rtl">
+@model List<Karkard.Models.Answers>
+
+@{
+    ViewData["Title"] = "پاسخ آزمون";
+
+}
+
+<img src="~/css/decoration-star.svg" alt="" class="decorate-star position-absolute" />
+<img src="~/css/decoration-star.svg" alt="" class="decorate-star-2 position-absolute" />
+
+
+
+<h1 style="color:brown">@ViewData["Title"]</h1>
+<hr />
+
+
+<p><strong>پاسخ شما</strong></p>
+<ul>
+    @foreach (var userAnswer in Model)
+    {
+        <li>پاسخ 1: @userAnswer.Answer1</li>
+        <li>پاسخ 2: @userAnswer.Answer2</li>
+        <li>پاسخ 3: @userAnswer.Answer3</li>
+        <li>پاسخ 4: @userAnswer.Answer4</li>
+        <li class="mb-5">پاسخ 5: @userAnswer.Answer5</li>
+    }
+</ul>
+
+<p><strong>پاسخ‌های صحیح</strong></p>
+<ul>
+    @foreach (var correctAnswer in Model)
+    {
+        <li>پاسخ صحیح 1: 2</li>
+        <li>پاسخ صحیح 2: 3</li>
+        <li>پاسخ صحیح 3: 2</li>
+        <li>پاسخ صحیح 4: 3</li>
+        <li class="mb-5">پاسخ صحیح 5: 3</li>
+    }
+</ul>
+
+<p><strong>نمره شما:</strong> @ViewData["Score"]</p>
+</html>
