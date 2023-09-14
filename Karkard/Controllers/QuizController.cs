@@ -17,10 +17,55 @@ namespace Karkard.Controllers
             _logger = logger;
 
         }
- 
+
         public IActionResult Quiz()
         {
-            return View();
+            var answer = new Answers();
+            List<Question> questions = new List<Question>
+    {
+        new Question
+        {
+
+            QuestionText = "بر اساس آیین نامه راهنمایی رانندگی ایستاندن ممنوع همان ........... است?",
+            AnswerOptions = new List<string> { "توقف ممنوع", "توقف مطلقا ممنوع", "توقف", "ایست وسیله نقلیه در زمان کوتاه" },
+            CorrectAnswerIndex = answer.Answer1
+        },
+                        new Question
+                        { QuestionText = "در بزرگراه های درون شهری حداکثر سرعت چند کیلومتر در ساعت است?",
+            AnswerOptions = new List<string> { "110 ", "120 ", "100", "95 " },
+            CorrectAnswerIndex = answer.Answer2
+                },
+                                   new Question
+                        { QuestionText = "از چند متری بعد از پیچ ها سبقت گرفتن آزاد است?",
+            AnswerOptions = new List<string> { "30 متری ", "50 متری ", "20 متری", "100 متری " },
+            CorrectAnswerIndex = answer.Answer3
+                },
+                                              new Question
+                        { QuestionText = "قبل از شروع حرکت باید کدام یک از چراغ های خودرو مورد بازبینی قرار بگیرد?",
+            AnswerOptions = new List<string> { "چراغ جلو - چراغ عقب - چراغ ABS - چراغ راهنما  ", "چراغ جلو - چراغ عقب - چراغ راهنما در صورت کثیف بودن ", "چراغ جلو - چراغ خطر  - چراغ دنده عقب - چراغ راهنما", "گزینه 2 و 3 صحیح است  " },
+            CorrectAnswerIndex = answer.Answer4
+                },
+                                                         new Question
+                        { QuestionText = "در آزادراه های برون شهری حداقل سرعت چند کیلومتر در ساعت است?",
+            AnswerOptions = new List<string> { "95  ", "80  ", "70 ", "65  " },
+            CorrectAnswerIndex = answer.Answer5
+                },
+    };
+
+
+            Random rng = new Random();
+            int n = questions.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                var question = questions[k];
+                questions[k] = questions[n];
+                questions[n] = question;
+            }
+
+            return View(questions);
+
         }
 
         [HttpPost]
